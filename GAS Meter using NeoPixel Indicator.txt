@@ -31,11 +31,11 @@ void status_Indicator()
     		{
       		switch_led(strip.Color(255, 0, 0), 0, 12);
     		}
-    	else if (sensor_In >=25 )	//if the contration level of gas increases above 25 then display red yellow
+    	if (sensor_In<40 && sensor_In >=25 )	//if the contration level of gas increases above 25 then display red yellow
     		{
-      		switch_led(strip.Color(255, 255, 0), 0, 12);
+      		switch_led(strip.Color(0, 255, 0), 0, 12);
     		} 
-	else				//if the contration level of gas increases below 25 then display red green
+	if ( sensor_In <25  )				//if the contration level of gas increases below 25 then display red green
     		{
       		switch_led(strip.Color(0, 255, 0), 0, 12);
     		}
